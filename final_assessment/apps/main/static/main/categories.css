@@ -1,0 +1,42 @@
+
+.container {
+    display: flex;
+    overflow: hidden;
+}
+
+.right_margin {
+    width:40%
+}
+
+.left_margin {
+    width:40%
+}
+
+.content {
+    margin-top: 10px;
+    text-align: justify;
+    width:20%
+}
+
+.category {
+    display: block;
+    text-align:center;
+    background-color: white;
+    /* border:grey solid 2px;  */
+    border-radius:12px;
+    margin: 20px;
+    padding: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: bold;
+    
+}
+
+.category a {
+    text-decoration: none;
+    color:black
+}
+
+.category:hover {
+    background-color: rgb(162, 197, 66);;
+}

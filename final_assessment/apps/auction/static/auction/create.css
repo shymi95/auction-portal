@@ -1,0 +1,115 @@
+.container {
+    display: flex;
+    overflow: hidden;
+}
+
+.right_margin {
+    width:35%
+}
+
+.left_margin {
+    width:35%
+}
+
+.content {
+    margin-top: 7%;
+    text-align: justify;
+    width:30%;
+    background-color: rgb(162, 197, 66);
+    padding: 3%;
+    padding-top: 1%;
+    padding-bottom:2%;
+
+    border-radius: 15px;
+}
+
+form input,label {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    padding-right: 0px;
+    padding-left:0px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+
+form input {
+    background-color: white;
+
+    border: 0px;
+    border-radius: 15px
+}
+
+form input:focus {
+    border: 0px;
+    outline:0px;
+}
+
+.register_button {
+    display: block;
+    color:white;
+    background-color:rgb(57, 104, 18);
+    width: 100%;
+    padding: 10px;
+    margin-top: 8%;
+    margin-bottom: 1%;
+    font-weight: bold;
+    font-size: larger
+}
+
+.register_button:hover {
+    background-color: rgb(39, 71, 9);
+}
+
+.error_message{
+    display: block;
+    text-align:center;
+    background-color: red;
+    color: white;
+    /* border:grey solid 2px;  */
+    border-radius:12px;
+    margin: 20px;
+    padding: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: bold;   
+}
+
+.success_message{
+    display: block;
+    text-align:center;
+    background-color: rgb(1, 83, 5);
+    color: white;
+    /* border:grey solid 2px;  */
+    border-radius:12px;
+    margin: 20px;
+    padding: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: bold;   
+    font-size: larger
+}
+
+.dropdown{
+    background-color: white;
+    display: block;
+    border: 0px;
+    border-radius: 15px;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: bold
+}
+
+.textarea {
+    background-color: white;
+    border: 0px;
+    border-radius: 15px;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: bold;
+    resize: vertical;
+}
+

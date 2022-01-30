@@ -1,0 +1,46 @@
+.result_container {
+    /* display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas: left middle right;
+    overflow: hidden; */
+    border-radius:12px;
+    margin: 20px;
+    padding: 2px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    height:50px;
+    text-decoration: None;
+}
+
+.green {
+    background-color:rgb(172, 214, 144)
+}
+
+.red {
+    background-color: rgb(211, 138, 138)
+}
+
+.result_container:hover{
+    background-color: rgb(96, 139, 61);
+}
+
+.column, .left, .middle, .middle_right, .right {
+    text-decoration: None;
+    color: black;
+}
+
+.column {
+    height: 50px;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+}   
+
+.middle, .right, .middle_right, .left {
+    width:25%
+}

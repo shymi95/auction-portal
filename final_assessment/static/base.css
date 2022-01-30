@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Style+Script&display=swap');
+
+body { 
+    margin: 0;
+    padding:0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+    background-color: rgb(225, 241, 210);
+    line-height: 1.6;
+  }
+
+/* HEADER */
+
+header {
+    top:0;
+    display: block;
+    overflow: hidden;
+    background-color: white;
+    height: 10%;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+    font-size: xx-large
+}
+
+/* NAVIGATION */
+
+.navigation_bar {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgb(162, 197, 66);
+    color: white;
+    margin: 0;
+    padding-right: 40px
+
+}
+
+.nav_left {
+    float: left;
+}
+
+.nav_right {
+    float: right;
+}
+    
+.navigation_bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navigation_bar li :hover {
+    background-color: rgb(57, 104, 18);
+}

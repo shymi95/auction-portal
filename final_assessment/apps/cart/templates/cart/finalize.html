@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+  <link rel="stylesheet" type="text/css" href={% static "user_handler/register_login.css" %}>
+{% endblock %}
+
+{% block title %}
+Finalizuj
+{% endblock %}
+
+{% block content %}
+
+</div>
+<div class="container">
+<div class="left_margin"></div>
+<div class="content">
+<form action="" method="post" class="searchbox">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Finalizuj" class="register_button">
+</form>
+<div class="right_margin"></div>
+</div>
+
+{% endblock %}

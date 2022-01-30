@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+  <link rel="stylesheet" type="text/css" href={% static "cart/item.css" %}>
+{% endblock %}
+
+{% block title %}
+{{object.title}}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<div class="left_margin"></div>
+<div class="content">
+<div class="paragraph">
+Title: {{auction.title}}
+<br>
+<br>
+<br>
+Description: {{auction.description}}
+<br>
+<br>
+<br>
+Current price: {% if display_price %} {{display_price}} {% else %} {{auction.current_price}} {% endif %} 
+<br>
+<br>
+<br>
+Ends: {{auction.ends}}
+<br>
+<br>
+<br>
+Kupujący: {% if bidder.email %} {{bidder.email}} {% else %} {{auction.buyer_ID}} {% endif %} 
+<br>
+<br>
+<br>
+</div>
+
+<div class="bid_box">
+{% if auction.is_paid == False %}
+    <a href="{% url 'cart:finalize' auction.id %}" class="bid_button"> Finalizuj </a>
+{% elif  graded == False %}
+<form action="" method="post" class="searchbox">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Oceń" class="register_button">
+</form>
+{% else %}
+    <div class="bid_button"> Aukcja jest zakończona </div>
+
+
+{% endif %}
+</div>
+
+</div>
+
+
+{% endblock %}

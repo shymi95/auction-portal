@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+  <link rel="stylesheet" type="text/css" href={% static "auction/auction.css" %}>
+{% endblock %}
+
+{% block title %}
+{{object.title}}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<div class="left_margin"></div>
+<div class="content">
+<div class="paragraph">
+Title: {{auction.title}}
+<br>
+<br>
+<br>
+Description: {{auction.description}}
+<br>
+<br>
+<br>
+Current price: {% if display_price %} {{display_price}} {% else %} {{auction.current_price}} {% endif %} 
+<br>
+<br>
+<br>
+Ends: {{auction.ends}}
+<br>
+<br>
+<br>
+Kupujący: {% if bidder.email %} {{bidder.email}} {% else %} {{auction.buyer_ID}} {% endif %} 
+<br>
+<br>
+<br>
+</div>
+<div class='container'>
+<form action="" method="post" class="bid_box">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Licytuj" class="bid_button">
+</form>
+<div class='herring'>
+<img src= {% static "images/sledz.png" %} alt="Nie udało się wczytać schematu" class="image">
+<br>
+<br>
+<form action="{% url 'auction:follow_auction' pk=auction.id  %}" method="POST">
+{% csrf_token %}
+<button type="submit" class="herring_button">{{follow}}</button>
+</form>
+</div>
+</div>
+{% if update_successful  == True %}
+<div class='success_message'>Zlicytowałeś aukcję</div>
+{% endif %}
+{% if update_successful  == False %}
+<div class='error_message'>Nowa wartość musi być większa niż dotychczasowa</div>
+{% endif %}
+
+{% endblock %}

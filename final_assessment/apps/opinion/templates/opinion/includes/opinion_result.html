@@ -1,0 +1,21 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static "opinion/includes/opinion_result.css" %}">
+
+
+<div class="result_container">
+    <div class="auction"> 
+        <div class="column left">
+            <div class='title'>{{auction.auction_ID}}</div>
+        </div>
+        <div class="column middle">
+            <div class='current_price'>{{auction.commentator_ID}}</div>
+        </div>
+        <div class="column middle_right">
+            <div class="current_bidder">{{auction.buyer_grade}}</div>
+        </div>
+        <div class="column right">
+            <div class='ends'>{{auction.buyer_comment}}</div>
+        </div>
+    </div>        
+</div>

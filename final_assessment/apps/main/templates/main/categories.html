@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css_files %}
+  <link rel="stylesheet" type="text/css" href={% static "main/categories.css" %}>
+{% endblock %}
+
+{% block title %}
+Strona Główna
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+<div class="left_margin"></div>
+<div class="content">
+
+{% for category in object_list %}
+<div class="category"><a href="{% url 'auction:searchbox_category' category=category.category%} ">{{category.category}}</a></div>
+{% endfor %}
+
+
+</div>
+<div class="right_margin"></div>
+
+{% endblock %}

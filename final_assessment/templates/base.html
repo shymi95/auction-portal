@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+  <title>
+  {% block title %}
+  {% endblock %}
+  </title>
+
+  <link rel="stylesheet" type="text/css" href={% static "base.css" %}>
+{% block css_files %}{% endblock %}
+</head>
+
+<body>
+
+<header> 
+<div class="page_title"> Dom Aukcyjny </div>
+</header>
+
+<nav>
+<ul class = "navigation_bar">
+  <li class = "nav_left"><a href="{% url 'main:index'%}">Główna</a></li>
+    <li class = "nav_left"><a href="{% url 'main:categories'%}">Kategorie</a></li>
+  <li class = "nav_left"><a href="{% url 'auction:searchbox'%}">Szukaj</a></li>
+  {% comment %} do dodania if -> jeżeli użytkownik się zalogował te opcje powinny być niewidoczne {% endcomment %}
+  {% if user.is_authenticated %}
+    <li class = "nav_right"><a href="{% url 'user_handler:logout'%}">Wyloguj</a></li>
+    <li class = "nav_right"><a href="{% url 'cart:cart'%}">Koszyk</a></li>
+    <li class = "nav_right"><a href="{% url 'auction:create_view'%}">Stwórz aukcję</a></li>
+    <li class = "nav_right"><a href="{% url 'cart:purchased'%}">Kupione</a></li>
+    <li class = "nav_right"><a href="{% url 'opinion:all_opinions'%}">Moje oceny</a></li>
+    <li class = "nav_right"><a href="{% url 'auction:followed'%}">Śledzone</a></li>
+    
+    {% else %}
+    <li class = "nav_right"><a href="{% url 'user_handler:login'%}">Zaloguj się</a></li>
+    <li class = "nav_right"><a href="{% url 'user_handler:registration'%}">Załóż konto</a></li>
+    {% endif %}
+  
+
+</ul>
+</nav>
+
+
+{% block content %}
+{% endblock %}
+
+
+</body>
+
+</html>

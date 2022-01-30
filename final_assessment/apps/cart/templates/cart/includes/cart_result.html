@@ -1,0 +1,31 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static "auction/includes/search_result.css" %}">
+
+
+<div class="result_container {% if auction.buyer_ID == user %} green {% else %} red {% endif %}">
+    <a href="{% url 'cart:item' auction.id %}" class="auction"> 
+        <div class="column left">
+            <div class='title'>{{auction.title}}</div>
+        </div>
+        <div class="column middle">
+            <div class='current_price'>{{auction.current_price}}</div>
+        </div>
+        <div class="column middle_right">
+            <div class="current_bidder">
+            
+            {% if auction.buyer_ID %}
+            {{auction.buyer_ID}}
+            {% else %}
+            Bądź pierwszy!
+            {% endif %}
+            
+            </div>
+
+
+        </div>
+        <div class="column right">
+            <div class='ends'>{{auction.category_ID}}</div>
+        </div>
+    </a>        
+</div>

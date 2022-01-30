@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    overflow: hidden;
+}
+
+.right_margin {
+    width:15%
+}
+
+.left_margin {
+    width:15%
+}
+
+.content {
+    margin-top: 10px;
+    text-align: justify;
+    width:70%
+}
+
+.label, .column, .left, .middle, .right {
+    text-decoration: None;
+    color: black;
+}
+
+.label {
+    height: 15px;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+}   
+
+.left {
+    width: 50%;
+  }
+
+.middle, .right {
+    width:25%
+}
+
+.label_container {
+    /* display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas: left middle right;
+    overflow: hidden; */
+    background-color: white;
+    border-radius:12px;
+    margin: 20px;
+    margin-top:12px;
+    margin-bottom:0;
+    padding: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    height:15px;
+    text-decoration: None;
+}

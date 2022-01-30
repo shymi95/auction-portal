@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+  <link rel="stylesheet" type="text/css" href={% static "auction/results.css" %}>
+{% endblock %}
+
+{% block title %}
+Wyniki wyszukiwania
+{% endblock %}
+
+{% block content %}
+
+</div>
+<div class="container">
+<div class="left_margin"></div>
+<div class="content">
+
+<div class="label_container">
+    <a href="" class="auction">
+        <div class="label left">
+            <div class='title'>Title</div>
+        </div>
+        <div class="label middle">
+            <div class='current_price'>Akualna Cena</div>
+        </div>
+        <div class="label right">
+            <div class='ends'>Koniec licytacji</div>        
+        </div>
+    </a>        
+</div>
+{% for auction in auctions %}
+
+{% include 'auction/includes/search_result.html'%}
+{% endfor %}
+
+<div class="right_margin"></div>
+</div>
+
+{% endblock %}

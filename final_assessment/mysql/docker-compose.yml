@@ -1,0 +1,24 @@
+version: '3.8'
+services:    
+  mysql:
+    # Name of docker image to download from docker hub
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_PORT: '3306'
+      # The database name to connect in the future
+      MYSQL_DATABASE: 'auction_portal_db'
+      # You don't have to use root, but you can if u like
+      MYSQL_USER: 'user'
+      # You can use whatever
+      MYSQL_PASSWORD: 'password'
+      #Password for root access
+      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_ROOT_HOST: '172.18.0.1'
+    ports:
+      # <Port exposed locally> : < MySQL Port running inside container>
+      - '3306:3306'
+    # Where our data will be persisted
+    volumes:
+      - ./my-db:/var/lib/mysql
+      

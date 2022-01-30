@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+<h2>Latest opinions</h2>
+
+{% if latest_opinion_list %}
+<div>
+    {% for opinion in latest_opinion_list %}
+    <div>
+        <h4><a href="{% url 'opinions:opinion' opinions.id %}">
+        {{ auction.title }}
+        </a></h4>
+        <h6>rated {{ opinions.buyer_grade }} of 5 by {{ user.email }}</h6>
+        <p>{{ opinions.buyer_comment }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No opinions are available.</p>
+{% endif %}
+
+
+<h3>Add your review</h3>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'opinions:add_opinion' auction.id %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Add" />
+</form>

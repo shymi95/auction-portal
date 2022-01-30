@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css_files %}
+  <link rel="stylesheet" type="text/css" href={% static "main/index.css" %}>
+{% endblock %}
+
+{% block title %}
+Strona Główna
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+<div class="left_margin"></div>
+<div class="content">
+
+<div class="paragraph">
+<h2>Krótki opis systemu</h2>
+
+System umożliwiający wystawianie aukcji oraz licytowanie przedmiotów. Dodatkowo system umożliwia zakładanie kont dla użytkowników oraz umożliwia ocenę transakcji.
+
+<hr>
+<ul><h2>Główne funkcje systemu</h2>
+<li>        Strona główna</li>
+<li>        Kategorie</li>
+<li>        Konto użytkownika</li>
+<li>        Aukcje</li>
+<li>        Wyszukiwanie aukcji</li>
+<li>        Licytacje</li>
+<li>        Oceny transakcji</li>
+<li>        Obserwacja aukcji</li>
+</ul>
+<hr>
+<ul><h2>Technologie</h2>
+<li>        Django</li>
+<li>        (Opcjonalnie) Bootstrap (front)</li>
+</ul>
+<hr>
+<ul><h2>Podstawowe byty</h2></ul>
+
+<ul><h3>Kategoria</h3>
+<li>        nazwa</li>
+<li>        opisowa nazwa</li>
+</ul>
+
+<ul><h3>Konto użytkownika</h3>
+<li>        login (email wykorzystywany do komunikacji i powiadomień)</li>
+<li>        hasło</li>
+<li>        nazwa konta</li>
+<li>        województwo</li>
+<li>        miasto</li>
+<li>        adres (ulica, nr domu, kod pocztowy)</li>
+<li>        data założenia konta</li>
+<li>        status konta (aktywne/nieaktywne)</li>
+<li>        (opcjonalnie) typ (normalne/Premium)</li>
+</ul>
+
+<ul><h3>Aukcja</h3>
+<li>        tytuł</li>
+<li>        opis</li>
+<li>        kategoria</li>
+<li>        kwota minimalna</li>
+<li>        data wystawienia</li>
+<li>        data zakończenia</li>
+<li>        status (zapłacone/niezapłacone)</li>
+<li>        (opcjonalnie) zdjęcia</li>
+<li>     (opcjonalnie) promowana (można przyjąć, że konto premium, może promować aukcje)</li>
+</ul>
+
+<ul><h3>Licytacja</h3>
+<li>        aukcja</li>
+<li>        użytkownik</li>
+<li>        moment licytacji</li>
+<li>        kwota</li>
+</ul>
+
+<ul><h3>Obserwacja aukcji</h3>
+<li>        aukcja</li>
+<li>        użytkownik</li>
+</ul>
+
+<ul><h3>Ocena transakcji (zakupu)</h3>
+<li>        zakup</li>
+<li>        ocena użytkownika</li>
+<li>        komentarz użytkownika</li>
+<li>ocena transakcji - opcjonalnie</li>
+</ul>
+
+<ul><h3>Zamówienie</h3></ul>
+<li>        produkt</li>
+<li>        użytkownik</li>
+<hr>
+<ul><h2>Funkcjonalności</h2></ul>
+
+
+<ul><h3>Prezentowanie strony głównej</h3>
+<li>  prezentacja kategorii: np. lista linków w lewej lub prawej kolumnie, prowadzących do aukcji z wybranej kategorii</li>
+<li>        prezentacja listy ostatnio dodanych aukcji</li>
+<li>        prezentacja listy kończących się aukcji</li>
+<li>        prezentacja listy aukcji zalogowanego usera (wystawionych)</li>
+<li>        prezentacja listy aukcji, które licytuje zalogowany user</li>
+<li>        prezentacja listy aukcji obserwowanych/ulubionych</li>
+</ul>
+
+<ul><h3>Wybór kategorii aukcji</h3>
+<li>        lista kategorii, w których umieszczane są aukcje</li>
+</ul>
+
+<ul><h3>Zarządzanie kontem użytkownika</h3>
+<li>        formularz umożliwiający założenie konta</li>
+<li>        strona (dostępna po zalogowaniu) umożliwiająca edycję danych konta</li>
+<li>        podobnie jak na stronie głównej, powinny się tu pojawić listy aukcji: obserwowanych, wystawionych, licytowanych (także przegranych) i zakończonych (wygranych jak i tych, które nie uzyskały kwoty minimalnej)</li>
+<li>        (opcjonalnie) prezentacja ocen i komentarzy z aukcji</li>
+</ul>
+
+<ul><h3>Wystawianie aukcji</h3>
+<li>        formularz umożliwiający wystawienie aukcji i określenie jej parametrów</li>
+</ul>
+
+<ul><h3>Wyszukiwanie aukcji</h3>
+<li>        strona prezentująca wyniki wyszukiwania aukcji - prowadzą do niej linki kategorii ze strony głównej, które są klikalne i przekierowują do strony z prezentacją wyników</li>
+<li>        filtrowanie/sortowanie po cenach i dacie kończącej aukcję</li>
+<li>        (opcjonalnie) pole na wpisanie numeru aukcji lub nazwy konta: szukanie po numerze (prezentuje konkretną aukcję), szukanie aukcji usera (prezentuje listę jego aukcji)</li>
+</ul>
+
+<ul><h3>Licytacje i zakupy</h3>
+<li>        zalogowany użytkownik może licytować aukcje</li>
+<li>        może podać dowolną kwotę (większą od obecnej)</li>
+<li>        (opcjonalnie) może od razu wybrać Kup teraz</li>
+<li>        można licytować tylko trwające aukcje</li>
+<li>        najwyższa oferta staje się zamówieniem</li>
+<li>        jeśli nie została osiągnięta kwota minimalna, to nie ma zwycięzcy</li>
+<li>        Dla uproszczenia trzeba napisać mechanizm, który będzie uruchamiany przy każdym wejściu na stronę i będzie „zamykał” aukcje, które się skończyły (od ostatniego wejścia na stronę) i wyłaniał zwycięzców</li>
+<li>        dokonywanie płatności</li>
+</ul>
+
+<ul><h3>Oceny transakcji</h3>
+<li>        zarówno sprzedający jak i kupujący może wystawić ocenę oraz komentarz</li>
+</ul>
+
+<ul><h3>Obserwacja aukcji</h3>
+<li>        zalogowany użytkownik może dodać aukcję do obserwowanych/ulubionych</li>
+<li>        po wejściu na obserwowaną aukcję, ten fakt będzie zaznaczony, np. napisem albo obrazkiem gwiazdki</li>
+</ul>
+<hr>
+<ul><h2> Schemat frontend'u </h2></ul>
+<img src={% static "images/Flowchart - frontend.png" %} alt="Nie udało się wczytać schematu" class="flowchart">
+
+<ul><h2> Schemat bazy danych </h2></ul>
+<img src={% static "images/Flowchart - db.png" %} alt="Nie udało się wczytać schematu" class="flowchart">
+
+</div>
+
+
+</div>
+
+{% if user.is_authenticated %}
+<div>Logged user: {{ user.email }}</div>
+{% else %}
+<div>No user logged</div>
+<div class="right_margin"></div>
+{% endif %}
+
+{% endblock %}

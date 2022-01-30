@@ -1,0 +1,246 @@
+  
+.paragraph {
+    display: block;
+    background-color: white;
+    /* border:grey solid 2px;  */
+    border-radius:12px;
+    margin: 20px;
+    padding: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.content {
+    margin-top: 10px;
+    text-align: justify;
+    width:40%
+}
+
+.container {
+    display: flex;
+    overflow: hidden;
+}
+
+.right_margin {
+    width:30%
+}
+
+.left_margin {
+    width:30%}
+
+
+form input,label,button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    padding-right: 0px;
+    padding-left:0px;
+    font-weight: bold;
+}
+form input, form button {
+    background-color: white;
+    border: 0px;
+    border-radius: 15px
+}
+form input:focus, form button:focus {
+    border: 0px;
+    outline:0px;
+}
+
+.herring {
+    margin: 2%;
+    text-align: center;
+    width: 90%;
+    background-color: rgb(162, 197, 66);
+    border-radius: 15px;
+    padding-top: 3%;
+    padding-left:2%;
+    padding-right:2%;
+    margin-bottom:0%;
+    padding-bottom: 0%
+}
+.bid_box {
+    margin: 2%;
+    text-align: center;
+    width: 90%;
+    background-color: rgb(162, 197, 66);
+    border-radius: 15px;
+    padding-top: 3.5%;
+    padding-left:2%;
+    padding-right:2%;
+    margin-bottom:0%;
+    padding-bottom: 0%
+}
+.bid_input {
+    background-color:white;
+    text-align: center;
+}
+.bid_button {
+    display: block;
+    color:white;
+    background-color:rgb(57, 104, 18);
+    padding: 10px;
+    margin-top: 8%;
+    margin-bottom: 1%;
+    font-weight: bold;
+    font-size: larger
+}
+.bid_button:hover, .herring_button:hover {
+    background-color: rgb(39, 71, 9);
+}
+.error_message{
+    display: block;
+    text-align:center;
+    background-color: red;
+    color: white;
+    /* border:grey solid 2px;  */
+    border-radius:12px;
+    margin: 20px;
+    padding: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: bold;   
+}
+.success_message{
+    display: block;
+    text-align:center;
+    background-color: rgb(1, 83, 5);
+    color: white;
+    /* border:grey solid 2px;  */
+    border-radius:12px;
+    margin: 20px;
+    padding: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: bold;   
+    font-size: larger
+}
+
+.image {
+    height: 30%;
+    width: auto
+}
+
+.herring_button {
+    display: block;
+    color: white;
+    background-color: rgb(57, 104, 18);
+    padding: 10px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-weight: bold;
+    font-size: larger;
+    border: 0px;
+    border-radius: 15px;
+    text-align: center;
+    width:100%;
+}
+
+
+form input,label,button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    padding-right: 0px;
+    padding-left:0px;
+    font-weight: bold;
+}
+form input, form button {
+    background-color: white;
+    border: 0px;
+    border-radius: 15px
+}
+form input:focus, form button:focus {
+    border: 0px;
+    outline:0px;
+}
+
+.herring {
+    margin: 2%;
+    text-align: center;
+    width: 90%;
+    background-color: rgb(162, 197, 66);
+    border-radius: 15px;
+    padding-top: 3%;
+    padding-left:2%;
+    padding-right:2%;
+    margin-bottom:0%;
+    padding-bottom: 0%
+}
+.bid_box {
+    margin: 2%;
+    text-align: center;
+    width: 90%;
+    background-color: rgb(162, 197, 66);
+    border-radius: 15px;
+    padding-top: 3.5%;
+    padding-left:2%;
+    padding-right:2%;
+    margin-bottom:0%;
+    padding-bottom: 0%
+}
+.bid_input {
+    background-color:white;
+    text-align: center;
+}
+.bid_button {
+    display: block;
+    color:white;
+    background-color:rgb(57, 104, 18);
+    padding: 10px;
+    margin-top: 8%;
+    margin-bottom: 1%;
+    font-weight: bold;
+    font-size: larger
+}
+.bid_button:hover, .herring_button:hover {
+    background-color: rgb(39, 71, 9);
+}
+.error_message{
+    display: block;
+    text-align:center;
+    background-color: red;
+    color: white;
+    /* border:grey solid 2px;  */
+    border-radius:12px;
+    margin: 20px;
+    padding: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: bold;   
+}
+.success_message{
+    display: block;
+    text-align:center;
+    background-color: rgb(1, 83, 5);
+    color: white;
+    /* border:grey solid 2px;  */
+    border-radius:12px;
+    margin: 20px;
+    padding: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: bold;   
+    font-size: larger
+}
+
+.image {
+    height: 30%;
+    width: auto
+}
+
+.herring_button {
+    display: block;
+    color: white;
+    background-color: rgb(57, 104, 18);
+    padding: 10px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-weight: bold;
+    font-size: larger;
+    border: 0px;
+    border-radius: 15px;
+    text-align: center;
+    width:100%;
+}

@@ -1,0 +1,148 @@
+.container {
+    display: flex;
+    overflow: hidden;
+}
+
+.right_margin {
+    width:15%
+}
+
+.left_margin {
+    width:15%
+}
+
+.content {
+    margin-top: 10px;
+    text-align: justify;
+    width:70%
+}
+
+form {
+    border: 0px;
+    border-radius:20px;
+    margin: 20px;
+    margin-top: 40px;
+  
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#id_search_key {
+    display: block;
+    width: 80%;
+    background-color: white;
+    padding: 12px;
+    font-weight: bold;
+    float: left;
+    border: 0px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.searchbutton {
+    float: left;
+    width: 10%;
+    padding: 12px;
+    background: rgb(162, 197, 66);
+    color: white;
+    border: 0px;
+    border-left: none;
+    cursor: pointer;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.searchbutton:hover {
+    background: rgb(57, 104, 18)
+}
+
+#id_search_key:focus {
+    border: 0px;
+    outline:0px;
+}
+
+.label, .column, .lab_left, .lab_middle, .lab_right {
+    text-decoration: None;
+    color: black;
+}
+
+.label {
+    height: 15px;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+}   
+
+.lab_middle, .lab_right, .lab_left, .lab_middle_right {
+    width:25%
+}
+
+.label_container {
+    /* display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas: left middle right;
+    overflow: hidden; */
+    background-color: white;
+    border-radius:12px;
+    margin: 20px;
+    margin-top:20px;
+    margin-bottom:0;
+    padding: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    height:15px;
+    text-decoration: None;
+}
+
+.step-links {
+    display: block;
+    background-color: white;
+    border-radius:12px;
+    margin:0;
+    padding:12px;
+    font-weight: bold;
+    text-decoration: None;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.pagination a {
+    text-decoration: None;
+    color: black;
+    padding:5px;
+    height: 100%;
+}
+.pagination a:hover {
+    background-color:rgb(162, 197, 66);
+    border-radius: 12px
+}
+
+.searchbox {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.placeholder{
+    height:20px
+}
+
+.error_message{
+    display: block;
+    text-align:center;
+    background-color: red;
+    color: white;
+    /* border:grey solid 2px;  */
+    border-radius:12px;
+    margin: 20px;
+    padding: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: bold;   
+}
+

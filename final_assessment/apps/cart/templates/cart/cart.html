@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+  <link rel="stylesheet" type="text/css" href={% static "auction/searchbox.css" %}>
+{% endblock %}
+
+{% block title %}
+Koszyk
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+<div class="left_margin"></div>
+
+<div class="content">
+{% if object_list %}
+<div class="label_container">
+    <a href="" class="auction">
+        <div class="label lab_left">
+            <div class='title'>Title</div>
+        </div>
+        <div class="label lab_middle">
+            <div class='current_price'>Akualna Cena</div>
+        </div>
+        <div class="label lab_middle_right">
+            <div class='current_price'>Aktualny Kupujący</div>
+        </div>
+        <div class="label lab_right">
+            <div class="category">Kategoria</div>
+        </div>
+    </a>
+</div>
+
+{% for auction in object_list %}
+{% include 'cart/includes/cart_result.html'%}
+{% endfor %}
+{% else %}
+<div> Nic nie jest śledzone :( </div>
+{% endif%}
+
+<br>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; FIRST</a>
+            <a href="?page={{ page_obj.previous_page_number }}">PREVIOUS</a>
+        {% endif %}
+
+        <span class="current">
+            {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">NEXT</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">LAST &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+
+</div>
+
+<div class="right_margin"></div>
+
+</div>
+
+{% endblock %}
